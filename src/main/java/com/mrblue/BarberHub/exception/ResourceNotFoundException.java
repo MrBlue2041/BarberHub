@@ -1,4 +1,4 @@
-package com.mrblue.BarberHub.account.exception;
+package com.mrblue.BarberHub.exception;
 
 public class ResourceNotFoundException extends RuntimeException {
     public ResourceNotFoundException(String msg){

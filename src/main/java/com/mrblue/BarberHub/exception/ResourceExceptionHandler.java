@@ -1,4 +1,4 @@
-package com.mrblue.BarberHub.account.exception;
+package com.mrblue.BarberHub.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

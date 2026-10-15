@@ -1,9 +1,8 @@
 package com.mrblue.BarberHub.account.service;
 
 import com.mrblue.BarberHub.account.entity.Account;
-import com.mrblue.BarberHub.account.exception.ResourceNotFoundException;
+import com.mrblue.BarberHub.exception.ResourceNotFoundException;
 import com.mrblue.BarberHub.account.repository.AccountRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
