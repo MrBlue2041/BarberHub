@@ -1,5 +1,4 @@
 package com.mrblue.BarberHub.barbershop.service;
-
 import com.mrblue.BarberHub.barbershop.entity.Barbershop;
 import com.mrblue.BarberHub.barbershop.repository.BarbershopRepository;
 import com.mrblue.BarberHub.exception.ResourceNotFoundException;
@@ -53,6 +52,12 @@ public class BarbershopService {
     }
 
     public void deleteByID(Long id){
+        Optional<Barbershop> barbershop = barbershopRepository.findById(id);
+
+        if (barbershop.isEmpty()) {
+            throw new ResourceNotFoundException("Barbershop not found: " + id);
+        }
+
         barbershopRepository.deleteById(id);
     }
 

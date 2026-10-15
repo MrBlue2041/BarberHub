@@ -46,6 +46,13 @@ public class AccountService {
     }
 
     public void deleteByID(Long id){
+
+        Optional<Account> account = accountRepository.findById(id);
+
+        if (account.isEmpty()) {
+            throw new ResourceNotFoundException("Account not found: " + id);
+        }
+
         accountRepository.deleteById(id);
     }
 
